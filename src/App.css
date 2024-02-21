@@ -39,7 +39,7 @@
 .balance-visa .balance .detail {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 25%;
 }
 
@@ -56,7 +56,7 @@
 
 .balance-visa .balance .detail .desc {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -482,7 +482,7 @@
     .balance-visa .balance .detail {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         width: auto;
     }
     
