@@ -6,38 +6,38 @@ function LeftSideBar() {
     return (
         <div id='sidenav' className={styles.sidenav}>
             <div id='nav1' className={styles.nav1}>
-                <a href='' className={styles.logo} id='logo'>
+                <a href='/' className={styles.logo} id='logo'>
                     S.
                 </a>
-                <a href='' className={styles.message} id='message'>
+                <a href='/' className={styles.message} id='message'>
                     <LuMessagesSquare />
                 </a>
             </div>
             <div id='nav2' className={styles.nav2}>
-                <a href='' className={styles.menu} id='home'>
+                <a href='/' className={styles.menu} id='home'>
                     <RiHome3Line />
                 </a>
-                <a href='' className={styles.menu} id='notif'>
+                <a href='/' className={styles.menu} id='notif'>
                     <RiNotification3Line />
                 </a>
-                <a href='' className={styles.menu} id='time'>
+                <a href='/' className={styles.menu} id='time'>
                     <RiTimeLine />
                 </a>
-                <a href='' className={styles.menu} id='friend'>
+                <a href='/' className={styles.menu} id='friend'>
                     <LuUsers2 />
                 </a>
-                <a href='' className={styles.menu} id='folder'>
+                <a href='/' className={styles.menu} id='folder'>
                     <RiFolder3Line />
                 </a>
-                <a href='' className={styles.menu} id='setting'>
+                <a href='/' className={styles.menu} id='setting'>
                     <RiSettings3Line />
                 </a>
             </div>
             <div id='nav3' className={styles.nav3}>
-                <a href='' className={styles.menu} id='profile'>
+                <a href='/' className={styles.menu} id='profile'>
                     <RiUser3Line />
                 </a>
-                <a href='' className={styles.menu} id='logout'>
+                <a href='/' className={styles.menu} id='logout'>
                     <RiLogoutBoxRLine />
                 </a>
             </div>

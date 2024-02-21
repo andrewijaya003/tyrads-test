@@ -4,10 +4,6 @@ import { transaction } from '../../../model/types'
 import { RiMore2Fill } from 'react-icons/ri'
 
 function Transaction(props:transaction) {
-    const year = props.date.getFullYear()
-    const month = props.date.getMonth()
-    const day = props.date.getDate()
-
     return (
         <div className={styles.container}>
             <div className={styles.left}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import styles from './BarChart.module.css'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import {

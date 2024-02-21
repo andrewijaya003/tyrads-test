@@ -4,7 +4,7 @@ import { message } from '../../../model/types'
 
 function Chat(props:message) {
     return (
-        props.sender.id == 1 ?
+        props.sender.id === 1 ?
         <div className={styles.container}>
             <div className={styles.image}>
                 <img src="./logo192.png" alt="" />
