@@ -1,38 +1,559 @@
-.App {
-  text-align: center;
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+    width: calc(100% - 65px);
+    padding: 25px;
+    width: 70%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sec1 {
+    margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sec1 .greeting {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sec1 .message {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.balance-visa {
+    display: flex;
+    justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.balance-visa .balance {
+    width: 55%;
+    height: max-content;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.balance-visa .balance .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 25%;
+}
+
+.balance-visa .balance .detail .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.balance-visa .balance .detail .money {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 6px 0px;
+}
+
+.balance-visa .balance .detail .desc {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.balance-visa .balance .detail .desc img {
+    width: 50px;
+    height: 100%;
+}
+
+.balance-visa .balance .detail .desc .text {
+    font-size: 12px;
+    margin-left: 8px;
+    color: var(--sec-text);
+    font-weight: bold;
+}
+
+.balance-visa .balance .detail .separator {
+    height: 2px;
+    width: 100%;
+    background-color: var(--grey);
+    margin: 6px 0px;
+}
+
+.balance-visa .balance .detail .minigraph {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.balance-visa .balance .detail .minigraph img {
+    height: 100%;
+    width: 80px;
+}
+
+.balance-visa .balance .detail .minigraph .text {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.balance-visa .balance .detail .note {
+    font-size: 12px;
+    color: var(--sec-text);
+}
+
+.balance-visa .balance .graph {
+    width: 75%;
+}
+
+.visa {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visa img {
+    width: 370px;
+}
+
+.sec2 {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.item {
+    width: 50%;
+    padding-right: 15px;
+    border-right: 2px solid var(--grey);
+}
+
+.item .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item .times {
+    display: flex;
+    align-items: center;
+}
+
+.item .times .time .hour{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item .times .time .date {
+    font-size: 12px;
+    color: var(--sec-text);
+}
+
+.item .times .arrowright {
+    font-size: 20px;
+    margin: 0px 15px;
+    color: var(--sec-text);
+}
+
+.item .shopping {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item .shopping .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item .shopping .menu .title {
+    font-size: 12px;
+    color: var(--sec-text);
+    display: flex
+}
+
+.item .shopping .menu .hightlight {
+    font-weight: bold;
+    color: black;
+    margin-left: 6px;
+}
+
+.item .shopping .menu .additem {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: 0.2s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item .shopping .menu .additem:hover {
+    background-color: var(--grey);
+}
+
+.item .shopping .items {
+    display: grid;
+    gap: 15px 15px;
+    grid-template-columns: auto auto;
+}
+
+.chat {
+    margin-left: 15px;
+    width: 50%;
+}
+
+.chat .friendname {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.chat .conversation {
+    height: 110px;
+    overflow-x: hidden;
+}
+
+.chat .conversation::-webkit-scrollbar { 
+    width: 0px;
+}
+
+.sendchat {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    background-color: var(--grey);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.sendchat .send {
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    resize: none;
+    overflow-x: hidden;
+}
+
+.sendchat .send::-webkit-scrollbar { 
+    width: 0px;
+}
+
+.sendchat .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sendchat .options .menus {
+    display: flex;
+    align-items: center;
+}
+
+.sendchat .options .menu1 {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.sendchat .options .menu2 {
+    cursor: pointer;
+}
+
+.sendchat .options .buttonsend {
+    background-color: var(--blue-purple);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.sec3 {
+    margin-top: 25px;
+}
+
+.transaction-analytic {
+    display: flex;
+
+}
+
+.transaction-analytic .transaction{
+    width: 55%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-analytic .transaction .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction-analytic .transaction .detail .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.transaction-analytic .transaction .detail .filters {
+    display: flex;
+    column-gap: 20px;
+    font-size: 14px;
+    color: var(--sec-text);
+}
+
+.transaction-analytic .transaction .detail .filters .newest,.oldest {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.transaction-analytic .transaction .detail .filters .newest:hover,.oldest:hover {
+    background-color: var(--grey);
+}
+
+.transaction-analytic .transaction .separator {
+    height: 2px;
+    width: 100%;
+    background-color: var(--grey);
+    margin: 6px 0px;
+}
+
+.transaction-analytic .transaction .transactions {
+    width: 100%;
+    overflow-x: hidden;
+    height: 200px;
+}
+
+.transaction-analytic .transaction .transactions::-webkit-scrollbar {
+    width: 0px;
+}
+
+.analytic {
+    width: 45%;
+    margin-left: 25px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.analytic .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.analytic .detail .title {
+    font-weight: bold;
+}
+
+.analytic .detail .more {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.analytic .detail .more:hover {
+    background-color: var(--grey);
+}
+
+.analytic .graph {
+    position: relative;
+}
+
+.analytic .graph .desc {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 55%;
+    left: 44%;
+}
+
+.analytic .graph .desc .percentage {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.analytic .graph .desc .text {
+    font-size: 14px;
+    color: var(--sec-text);
+}
+
+@media only screen and (max-width: 1300px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 65px;
+        width: calc(100% - 65px);
+        padding: 25px;
+        max-width: 905px;
+    }
+
+    .balance-visa .balance {
+        width: 100%;
+    }
+
+    .visa {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 65px;
+        width: calc(100% - 65px);
+        padding: 25px;
+        max-width: 797px;
+    }
+
+    .balance-visa .balance {
+        width: 100%;
+    }
+
+    .visa {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 65px;
+        width: calc(100% - 65px);
+        padding: 25px;
+        max-width: 705px;
+    }
+
+    .balance-visa .balance {
+        width: 100%;
+    }
+
+    .visa {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 65px;
+        width: calc(100% - 65px);
+        padding: 25px;
+        width: 100%;
+    }
+
+    .balance-visa {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .balance-visa .balance {
+        width: 100%;
+        height: max-content;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .balance-visa .balance .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: auto;
+    }
+    
+    .balance-visa .balance .graph {
+        width: auto;
+    }
+    
+    .visa {
+        display: none;
+    }
+    
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .item {
+        width: 100%;
+        padding-right: 0px;
+        border-right: 0px solid var(--grey);
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--grey);
+    }
+    
+    .item .shopping .items {
+        display: grid;
+        gap: 15px 15px;
+        grid-template-columns: auto;
+        overflow-x: hidden;
+        height: 150px;
+    }
+
+    .item .shopping .items::-webkit-scrollbar { 
+        width: 0px;
+    }
+    
+    .chat {
+        margin-left: 0px;
+        width: 100%;
+    }
+    
+    .chat .friendname {
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: 0px;
+        padding-top: 15px;
+    }
+    
+    .transaction-analytic {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .transaction-analytic .transaction{
+        width: auto;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .analytic {
+        width: auto;
+        margin-left: 0px;
+        margin-top: 25px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+    }
 }
